@@ -14,15 +14,15 @@ gearboxes = db['GearBoxes']
 apiRtr = APIRouter()
 
 #гет для одного
-@apiRtr.get("/controlunits_one")
+@apiRtr.get("/controlunit")
 async def searchControlunits_One(name):
     return controlunitEntity(controlunits.find_one({'name': f'{name}'}))
 
-@apiRtr.get("/engines_one")
+@apiRtr.get("/engine")
 async def searchEngines_One(name):
     return engineEntity(engines.find_one({'name': f'{name}'}))
 
-@apiRtr.get("/gearboxe_one")
+@apiRtr.get("/gearbox")
 async def searchGearboxes_One(name):
     return gearboxEntity(gearboxes.find_one({'name': f'{name}'}))
 
